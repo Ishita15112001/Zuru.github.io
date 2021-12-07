@@ -10,14 +10,83 @@ Tags: one-page, single-page, portfolio, custom-colors, post-formats, responsive,
 @import url("https://fonts.googleapis.com/css?family=Anaheim|Quattrocento+Sans:400,700");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:300,400,600");
 html {
-  background-color: #353b43;
-  color: #737f8a;
+  background-color: #2076AE;
+  color: #2076AE;
 }
 
+.background {
+  
+  animation: Gradient 10s ease infinite;
+  
+  padding:0;
+  margin:0px;
+}
+.cube {
+  color: #B0DEFF;
+  position: absolute;
+  top: 80vh;
+  left: 45vw;
+  width: 10px;
+  height: 10px;
+  border: solid 1px #B0DEFF;
+  transform: scale(0) rotate(0deg) translate(-50%, -50%);
+  animation: cube 10s ease-in forwards infinite;
+}
+.cube:nth-child(2n) {
+  border-color: #B0DEFF ;
+}
+.cube:nth-child(2) {
+  animation-delay: 2s;
+  left: 25vw;
+  top: 40vh;
+}
+.cube:nth-child(3) {
+  animation-delay: 4s;
+  left: 75vw;
+  top: 50vh;
+}
+.cube:nth-child(4) {
+  animation-delay: 6s;
+  left: 90vw;
+  top: 10vh;
+}
+.cube:nth-child(5) {
+  animation-delay: 8s;
+  left: 10vw;
+  top: 85vh;
+}
+.cube:nth-child(6) {
+  animation-delay: 10s;
+  left: 50vw;
+  top: 10vh;
+}
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes cube {
+  from {
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    opacity: 1;
+  }
+  to {
+    transform: scale(20) rotate(960deg) translate(-50%, -50%);
+    opacity: 0;
+  }
+}
+
+
 body {
-  background-color: #353b43;
+  background-color: #2076AE;
   font-family: "Anaheim", sans-serif;
-  color: #737f8a;
+  color: #2076AE;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -695,7 +764,6 @@ h6,p {
 
 .overlay::before {
   content: '';
-  background: rgba(0, 0, 0, 0.63);
   position: absolute;
   top: 0;
   right: 0;
@@ -705,7 +773,6 @@ h6,p {
 }
 
 .dark-bg {
-  background: rgba(0, 0, 0, 0.7);
   height: 100%;
   width: 100%;
   position: absolute;
